@@ -19,7 +19,7 @@ function normalise(item) {
 }
 
 function buildCard(item) {
-  const { title, image, price } = normalise(item);
+  const { title, image, price } = normalise(item.data);
  
   const li = document.createElement('li');
   const img = document.createElement('img');
