@@ -6,7 +6,7 @@ async function fetchItems(url) {
   if (!resp.ok) throw new Error(`API ${resp.status}`);
   const data = await resp.json();
   // DummyJSON wraps results in { products: [...] }
-  return Array.isArray(data) ? data : data.products;
+  return Array.isArray(data) ? data : data.data;
 }
  
 // Support both DummyJSON and MockAPI field names
@@ -19,7 +19,7 @@ function normalise(item) {
 }
 
 function buildCard(item) {
-  const { title, image, price } = normalise(item.data);
+  const { title, image, price } = normalise(item);
  
   const li = document.createElement('li');
   const img = document.createElement('img');
