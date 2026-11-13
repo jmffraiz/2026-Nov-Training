@@ -1,5 +1,5 @@
 // blocks/product-cards/product-cards.js
-const DEFAULT_API = '/product-data.json';
+const DEFAULT_API = 'https://main--2026-nov-training--jmffraiz.aem.page/product-data.json';
  
 async function fetchItems(url) {
   const resp = await fetch(url);
